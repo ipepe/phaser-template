@@ -16,10 +16,9 @@ class PlayerSprite extends Phaser.Sprite
 
     @game.add.existing(@)
 
-  preUpdate: ->
+  move: ->
     @body.velocity.x = 0
 
-    # Movement
     if @inputs.cursors.left.isDown
       @body.velocity.x = -150
       @animations.play 'left'
@@ -33,9 +32,6 @@ class PlayerSprite extends Phaser.Sprite
         @frame = 5
       @animations.stop()
 
-    # Jump
     if @inputs.jump.isDown && @body.touching.down && @game.time.now > @jumpTimer
       @body.velocity.y = -250
       @jumpTimer = @game.time.now + 750
-
-    super

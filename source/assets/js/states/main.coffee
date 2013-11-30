@@ -14,6 +14,7 @@ class MainState extends Phaser.State
 
   update: ->
     @game.physics.collide(@player, @collisionLayer)
+    @player.move()
 
   loadLevel: (key) ->
     @game.stage.backgroundColor = '#000000'
