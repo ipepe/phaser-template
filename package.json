@@ -7,7 +7,7 @@
     "url": "http://github.com/kevinthompson/phaser-template"
   },
   "dependencies": {
-    "photonstorm/phaser": "git://github.com/photonstorm/phaser"
+    "phaser": "photonstorm/phaser"
   },
   "devDependencies": {
     "grunt": "0.x.x",

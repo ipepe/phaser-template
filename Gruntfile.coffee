@@ -68,7 +68,7 @@ module.exports = (grunt) ->
         dest: 'build'
         expand: true
       phaser:
-        cwd: 'node_modules/Phaser/build'
+        cwd: 'node_modules/phaser/build'
         src: ['*.js']
         dest: 'build/assets/js'
         expand: true
