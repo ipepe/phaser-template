@@ -1,3 +1,10 @@
 window.onload = ->
-  @game = new Phaser.Game(800, 600, Phaser.AUTO)
-  @game.state.add 'main', new MainState, true
+  # Game (Full Screen by Default)
+  @game = new Phaser.Game(window.innerWidth, window.innerHeight, Phaser.AUTO)
+
+  # Additional Attributes
+  @game.title = 'Phaser Template'
+
+  # States
+  @game.state.add 'main', new MainState
+  @game.state.add 'loading', new LoadingState, true
